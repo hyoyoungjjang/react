@@ -14,15 +14,16 @@ export const CallGpt = async({prompt}) => {
             "role" : "user",
             "content" : prompt
         }],
-        "temperature" : 0.7,
-        "max_tokens" : 1_000
+        "temperature": 1,
+        "max_tokens": 1002,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
        }) 
     });
 
-    const responseData = await response.json();
+    const responseDate = await response.json();
 
-    const message = responseData.choices[0].message.content;
-    console.log(message);
-
-
+    const message = responseDate.choices[0].message.content;
+    return message;
 }

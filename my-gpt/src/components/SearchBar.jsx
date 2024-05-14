@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import styled from 'styled-components'
+import { FaArrowUp } from "react-icons/fa";
 
 const SearchBar = ({searchText, onChangeSearchText, onClickSearchIcon}) => {
   return (
@@ -9,12 +9,15 @@ const SearchBar = ({searchText, onChangeSearchText, onClickSearchIcon}) => {
             value={searchText}
             onChange={onChangeSearchText}
             type='text'
-            placeholder='궁금한거'
-        />
-        <UploadIconBox 
+            placeholder='궁굼한것을 물어보세요...'
+            />
+        <UploadIconBox
             search={searchText}
             onClick={onClickSearchIcon}>
-            <FaArrowAltCircleUp/>
+            <FaArrowUp 
+                style={{
+                    color: "white"
+                }}/>
         </UploadIconBox>
     </SearchBarContainer>
   )
